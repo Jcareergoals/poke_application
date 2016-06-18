@@ -1,9 +1,3 @@
-<?
-	$poke_info = $this->session->userdata('poke_history');
-	$user = $this->session->userdata('user');
-	$poke = $this->session->userdata('pokes');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +6,26 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" 
 	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="/assets/css/pokes_styles.css">
+	<?
+		$poke_info = $this->session->userdata('poke_history');
+		$user = $this->session->userdata('user');
+		$poke = $this->session->userdata('pokes');
+	?>
 	<style type="text/css">
 		<? $x = rand(1,6); ?>
 		body {
 			background-color: rgb(245,245,245);
-			background-image: url('/assets/images/img<? echo $x;?>.jpg');
+			background: url('/assets/images/img<? echo $x;?>.jpg') no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
 			background-size: cover;
 		}
 	</style>
@@ -74,7 +74,8 @@
 						<th>Poke History</th>
 						<th>action</th>
 					</tr>
-			<? foreach ($poke_info as $x) {?>
+			<? if($poke_info){
+				foreach ($poke_info as $x) {?>
 					<tr>
 						<td><? echo $x['name'];?></td>
 						<td><? echo $x['alias'];?></td>
@@ -82,7 +83,7 @@
 						<td><? echo $x['name'] ." has ".$x['poke_history']." pokes.";?></td>
 						<td><a href="/pokes/poke_user/<? echo $x['id']?>/<? echo $user['id']?>" class='poke btn'>Poke</a></td>
 					</tr>
-			<?}?>
+			<?}}?>
 				</table>
 			</div>
 		</div>
