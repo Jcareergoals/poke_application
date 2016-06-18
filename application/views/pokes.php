@@ -3,6 +3,7 @@
 <head>
 	<title>Pokes</title>
 	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -13,16 +14,17 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="/assets/css/pokes_styles.css">
+	<!-- PHP Script for background image -->
 	<?
 		$poke_info = $this->session->userdata('poke_history');
 		$user = $this->session->userdata('user');
 		$poke = $this->session->userdata('pokes');
+		$x = rand(1,6); 
 	?>
 	<style type="text/css">
-		<? $x = rand(1,6); ?>
 		body {
-			background-color: rgb(245,245,245);
-			background: url('/assets/images/img<? echo $x;?>.jpg') no-repeat center center fixed;
+			/*background-color: rgb(245,245,245);*/
+			background: url('./assets/images/img<? echo $x;?>.jpg') no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
