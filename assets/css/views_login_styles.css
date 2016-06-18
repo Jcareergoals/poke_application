@@ -10,6 +10,7 @@ body { padding: 20px; }
 	background-color: rgba(255,255,255,.9);
 	margin: 25px auto;
 	padding: 15px; 
+	overflow: auto; 
 }
 .submit {
 	background-color: green;

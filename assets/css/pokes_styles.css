@@ -1,33 +1,56 @@
-		* {
-			margin: 0px; 
-			padding: 0px; 
-			font-family: tahoma;
-		}
-		.container {
-			max-width: 960px; 
-			border: 2px solid grey; 
-			padding: 15px; 
-			margin: 40px auto;
-			background-color: rgba(255,255,255,.9);
-			overflow: auto;
-		}
-		.row {
-			margin-top: 10px; 
-		}
-		.poke_log {
-			margin-left: 10px; 
-			padding: 10px;
-			height: 120px;  
-			overflow: auto;	
-			border: 2px solid grey; 
-		}
-		.poke {
-			color: white;
-			background-color: green;
-			padding: 5px 10px; 
-			border: 2px solid black; 
-		}
-		.poke_table {
-			max-height: 300px; 
-			overflow: auto; 
-		}
+* {
+	margin: 0px; 
+	padding: 0px; 
+	font-family: tahoma;
+}
+body {
+	padding: 20px;
+}
+.container {
+	max-width: 960px; 
+	border: 1px solid black; 
+	padding: 15px; 
+	margin: 40px auto;
+	background-color: rgba(255,255,255,.9);
+	overflow: auto;
+	box-shadow: 0px 0px 7px white;
+}
+.row {margin-top: 10px;}
+.poke_log {
+	margin-left: 10px; 
+	padding: 10px;
+	height: 120px;  
+	overflow: auto;	
+	border: 2px solid grey; 
+	background-color: rgb(210,210,210);
+	box-shadow: 0px 0px 5px black inset;
+}
+.poke {
+	color: white;
+	background-color: green;
+	padding: 5px 10px; 
+	border: 2px solid black; 
+}
+.poke_table {
+	max-height: 300px; 
+	overflow: auto; 
+}
+table th {background-color: rgb(210,210,210);}
+a.logout {
+	float: right;
+	font-weight: bold; 
+}
+h4, a.logout {display: inline-block;}
+.copyright {
+	color: white; 
+	text-align: center;
+}
+.copyright a {
+	color: orange; 
+	font-weight: bold;
+}
+table {
+	box-shadow: 0px 0px 5px black; 
+	margin-top: 5px;
+}
+

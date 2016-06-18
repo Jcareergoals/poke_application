@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Finger-pointing-icon.png">
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -24,7 +26,7 @@
 	?>
 	<style type="text/css">
 		body {
-			/*background-color: rgb(245,245,245);*/
+			background-color: rgb(245,245,245);
 			background: url('./assets/images/img<? echo $x;?>.jpg') no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
@@ -36,8 +38,9 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-sm-8">
+			<div class="col-xs-12">
 				<h4>Welcome, <? echo $user['alias'];?>!</h4>
+				<a href="users/logout" class='logout'>Logout</a>
 				<? if($poke)
 					{
 						if(count($poke) == 1)
@@ -55,12 +58,9 @@
 					} 
 				?>
 			</div>
-			<div class="col-xs-12 col-sm-4">
-				<a href="users/logout" class='col-xs-offset-10'>Logout</a>
-			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-6 col-sm-4 grey poke_log">
+			<div class="col-xs-11 col-sm-6 col-md-4 poke_log">
 			<? foreach ($poke as $y) {
 				echo "<p>{$y['alias']} poked you {$y['poke_count']} times. </p>";		
 			}?>
@@ -69,13 +69,13 @@
 		<div class="row">
 			<h4 class='col-xs-12'>People you may want to poke:</h4>
 			<div class="col-xs-12 poke_table">
-				<table class='table striped-table table-bordered'>
+				<table class='table table-striped table-bordered table-condensed table-hover'>
 					<tr>
 						<th>Name</th>
 						<th>Alias</th>
 						<th>Email Address</th>
 						<th>Poke History</th>
-						<th>action</th>
+						<th>Action</th>
 					</tr>
 			<? if($poke_info){
 				foreach ($poke_info as $x) {?>
@@ -91,5 +91,8 @@
 			</div>
 		</div>
 	</div> <!-- End Container -->
+
+	<!-- Copyright Section -->
+	<p class='copyright'>Copyright &copy; 2016 by <a href="https://www.linkedin.com/in/jose-chery-763110a1">Jose Chery</a></p>
 </body> 
 </head>
