@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login/Registration</title>
+	<title> The Poke | Login</title>
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Finger-pointing-icon.png">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -18,17 +19,17 @@
 	<!-- JQuery UI Library -->
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/flick/jquery-ui.css">
  	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
+	<link rel="stylesheet" type="text/css" href="/assets/css/views_login_styles.css">
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#dob').datepicker({changeYear: true, minDate: '-100Y', maxDate: "-1Y"});	
 		});
 	</script>
-	<link rel="stylesheet" type="text/css" href="/assets/css/views_login_styles.css">
 	<style type="text/css">
-		<? $x = rand(1,6);?>
+		<? $x = rand(1,6); ?>
 		body {
 			background-color: rgb(245,245,245);
-			background: url("/assets/images/img<? echo $x;?>.jpg") no-repeat center center fixed;
+			background: url("/assets/images/img<? echo $x;?>.jpg") no-repeat center center fixed; 
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -39,11 +40,11 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<h3 class='col-xs-12'>Welcome</h3>
+			<h3 class='col-xs-12'>The Poke</h3>
 		</div>
-
 		<div class="row">
-			<div class="col-sm-6">
+			<!-- Registration Section -->
+			<div class="col-xs-12 col-sm-6">
 				<div class="col-xs-7 col-xs-offset-3">
 					<label class='form_type'>Register</label>
 				</div>
@@ -95,8 +96,8 @@
 					</div>
 				</form>
 			</div>
-
-			<div class="col-sm-6">
+			<!-- Login Section -->
+			<div class="col-xs-12 col-sm-6">
 				<div class="col-xs-7 col-xs-offset-3">
 					<label class='form_type'>Login</label>
 				</div>
@@ -122,4 +123,7 @@
 			</div>
 		</div>
 	</div> <!-- End Container -->
+
+	<!-- Copyright Section -->
+	<p class='copyright'>Copyright &copy; 2016 by <a href="https://www.linkedin.com/in/jose-chery-763110a1">Jose Chery</a></p>
 </body> 
