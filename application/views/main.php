@@ -85,7 +85,7 @@
 					<div class="form-group">
 						<label for='dob' class='control-label col-xs-3'>Date of Birth:</label>
 						<div class="col-xs-9">
-							<input type='date' name='dob' id='dob' class='form-control' placeholder='MM/DD/YYYY'>
+							<input type='text' name='dob' id='dob' class='form-control' placeholder='MM/DD/YYYY'>
 							<span class='error'><? echo $this->session->flashdata('dob');?></span>
 						</div>
 					</div>
