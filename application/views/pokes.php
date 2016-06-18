@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Pokes</title>
+	<title>The Poke | Dashboard</title>
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Finger-pointing-icon.png">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -35,7 +36,7 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-8">
+			<div class="col-xs-12 col-sm-8">
 				<h4>Welcome, <? echo $user['alias'];?>!</h4>
 				<? if($poke)
 					{
@@ -54,7 +55,7 @@
 					} 
 				?>
 			</div>
-			<div class="col-xs-4">
+			<div class="col-xs-12 col-sm-4">
 				<a href="users/logout" class='col-xs-offset-10'>Logout</a>
 			</div>
 		</div>
