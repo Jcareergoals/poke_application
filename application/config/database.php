@@ -48,9 +48,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
+$db['default']['hostname'] = 'portfolio.catsrmnhafjl.us-east-1.rds.amazonaws.com';
+$db['default']['username'] = 'jetblue1946';
+$db['default']['password'] = '4416277q';
 $db['default']['database'] = 'poke';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
