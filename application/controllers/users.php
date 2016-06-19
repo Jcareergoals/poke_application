@@ -5,7 +5,6 @@ class users extends CI_Controller {
 	{
 		$this->load->view('main');
 	}
-
 	public function register() {
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', 'Name', 'required|min_length[4]|trim|ucwords');
@@ -62,7 +61,6 @@ class users extends CI_Controller {
 			redirect('/');
 		}
 	}
-
 	public function get_user()
 	{
 		$this->load->model('user');

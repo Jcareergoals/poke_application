@@ -3,7 +3,7 @@
 class pokes extends CI_Controller {
 	public function index()
 	{
-		$this->load->view('pokes');
+		$this->load->view('dashboard');
 	}
 	public function get_poke_history()
 	{
@@ -13,9 +13,8 @@ class pokes extends CI_Controller {
 		$pokes = $this->poke->session_user_pokes($user);
 		$this->session->set_userdata('poke_history', $history);
 		$this->session->set_userdata('pokes', $pokes);
-		redirect('/pokes');
+		redirect("/pokes");
 	}
-
 	public function poke_user($poked_user_id, $user_id)
 	{
 		$this->load->model('poke');
